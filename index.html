@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm Đường Đi Ngắn Nhất</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="search-container">
+            <h1>Tìm Đường Đi Ngắn Nhất</h1>
+            <div class="input-group">
+                <input id="origin" type="text" placeholder="Nhập điểm xuất phát" class="input">
+                <input id="destination" type="text" placeholder="Nhập điểm đến" class="input">
+                <input id="time" type="datetime-local" class="input">
+                <button onclick="calculateRoute()" class="search-button">Tìm đường</button>
+            </div>
+            <div id="traffic-warning" class="warning"></div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
